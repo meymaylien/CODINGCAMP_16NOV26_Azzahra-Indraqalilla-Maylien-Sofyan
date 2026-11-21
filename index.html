@@ -1,0 +1,86 @@
+<!DOCTYPE html>
+<html lang="en" data-theme="light">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Personal Dashboard</title>
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+  <div class="container">
+    <header>
+      <span class="logo">🏠 Dashboard</span>
+      <button id="theme-toggle" title="Toggle theme">🌙</button>
+    </header>
+
+    <!-- HERO -->
+    <div class="card hero">
+      <div class="hero-left">
+        <div id="greeting-text">Good Morning!</div>
+        <div id="datetime-date"></div>
+        <form id="name-form">
+          <input id="name-input" type="text" placeholder="Set your name…" autocomplete="off" />
+          <button type="submit" class="btn btn-white btn-sm">Save</button>
+        </form>
+      </div>
+      <div class="hero-right">
+        <div id="clock">00:00:00</div>
+      </div>
+    </div>
+
+    <div class="grid">
+      <!-- LEFT -->
+      <div class="col">
+        <div class="card">
+          <div class="card-title">⏱ Focus Timer</div>
+          <div class="timer-custom">
+            <label for="custom-min">Min:</label>
+            <input id="custom-min" type="number" min="1" max="120" value="25" />
+            <button class="btn btn-outline btn-sm" id="set-timer-btn">Set</button>
+          </div>
+          <div id="timer-display">25:00</div>
+          <div id="timer-status"></div>
+          <div class="timer-btns">
+            <button class="btn btn-primary" id="start-btn">▶ Start</button>
+            <button class="btn btn-outline" id="stop-btn">⏸ Stop</button>
+            <button class="btn btn-outline" id="reset-btn">↺ Reset</button>
+          </div>
+        </div>
+
+        <div class="card">
+          <div class="card-title">🔗 Quick Links</div>
+          <div id="links-grid"></div>
+          <div class="link-form">
+            <input id="link-name" type="text" placeholder="Label (e.g. YouTube)" />
+            <input id="link-url" type="url" placeholder="https://…" />
+            <button class="btn btn-primary btn-sm" id="add-link-btn">Add Link</button>
+          </div>
+        </div>
+      </div>
+
+      <!-- RIGHT -->
+      <div class="col">
+        <div class="card tasks-card">
+          <div class="card-title">✅ Tasks</div>
+          <div class="task-input-row">
+            <input id="task-input" type="text" placeholder="Add a new task…" autocomplete="off" />
+            <button class="btn btn-primary btn-sm" id="add-task-btn">Add</button>
+          </div>
+          <div class="sort-row">
+            <label for="sort-select">Sort:</label>
+            <select id="sort-select">
+              <option value="default">Default</option>
+              <option value="az">A → Z</option>
+              <option value="done">Done last</option>
+            </select>
+          </div>
+          <ul id="todo-list"></ul>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div id="toast"></div>
+  <script src="js/app.js"></script>
+</body>
+</html>
