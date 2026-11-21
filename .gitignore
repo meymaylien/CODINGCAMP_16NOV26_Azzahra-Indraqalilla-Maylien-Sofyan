@@ -1,0 +1,9 @@
+.kiro/logs/
+.kiro/identities/
+.kiro/sessions/
+.kiro/session-leases/
+.kiro/session-index/
+.kiro/session-relationships/
+.kiro/crew-auth-staging/
+.kiro/**/*.lock
+.kiro/
